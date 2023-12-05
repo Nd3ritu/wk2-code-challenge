@@ -1,4 +1,5 @@
 class Customer:
+    #customers lists
     customers = []
     #instance attributes
     def __init__(self, given_name, family_name):
@@ -16,28 +17,19 @@ class Customer:
     #returns given name of customer
     def given_name(self):
         return self.given_name
-    #prints family name
+    #returns family name of customer
     def family_name(self):
         return self.family_name
-    #prints full nam
+    #returns full name of customer
     def full_name(self):
         return f"{self.given_name} {self.family_name}"
-    
+    #adds customer to customers list
     @classmethod
     def all(cls,customer):
         cls.customers.append(customer)
 
 customer1 = Customer('John', 'Doe')
 customer2 = Customer('Matthew', 'Wambugu')
-# print(customer1.given_name)
-# print(customer2.full_name())
-# customers=Customer.customers
-
-# for customer in customers:
-#     print(vars(customer))
-
-
-# customer_names = [customermatthew@Dell-Precision-7530:~/p3/codechallenge$.full_name() for customer in Customer.customers]
-# print(customer_names)
-
-Customer.print_customers()
+print(customer1.given_name)# John
+print(customer2.full_name()) # Matthew Wambugu
+Customer.print_customers() # customers in dictionary format
